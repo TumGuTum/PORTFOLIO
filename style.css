@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Для Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 8px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #212121; /* Цвет скроллбара */
+    border-radius: 10px; /* Скругление краев скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет трека (дорожки) скроллбара */
+}
+
+/* Для Firefox */
+body {
+    scrollbar-width: thin; /* Делает скроллбар тонким */
+    scrollbar-color: #212121 #f1f1f1; /* Цвет скроллбара и трека */
+}
+
+/* Для IE и Edge */
+body::-ms-scrollbar {
+    width: 8px;
+}
+.header-item-lang-en .translate {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer; /* Это оставит кнопку кликабельной */
+}
+.header-item-lang-ru .translate {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    color:  #fff;
+    text-decoration: none;
+    cursor: pointer; /* Это оставит кнопку кликабельной */
+}
+body::-ms-scrollbar-thumb {
+    background-color: #212121;
+    border-radius: 10px;
+}
+
+body::-ms-scrollbar-track {
+    background: #f1f1f1;
+}
+/*Шапка*/
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+
+    }
+    a.smooth-scroll {
+        position: relative;
+        color: white;
+        text-decoration: none;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+    
+    a.smooth-scroll::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.3s ease, left 0.3s ease, right 0.3s ease;
+        width: 0;
+    }
+    
+    .portfolio-link::before {
+        left: 0; /* Линия начинается слева */
+        right: auto;
+    }
+    
+    .portfolio-link:hover::before {
+        width: 100%; /* Линия растягивается по всей ширине */
+    }
+    
+    .contacts-link::before {
+        right: 0; /* Линия начинается справа */
+        left: auto;
+    }
+    
+    .contacts-link:hover::before {
+        width: 100%; /* Линия растягивается по всей ширине */
+        right: 0;
+    }
+    .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 0 15px;
+      }
+      
+      .navbar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #000000;
+        z-index: 9999;
+      }
+      
+      .navbar__wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+      }
+      
+      .hamb {
+        display: none;
+      }
+      
+      .popup {
+        display: none;
+      }
+      
+      .logo {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+      }
+      
+      .menu > li > a {
+        text-decoration: none;
+      }
+      
+      .navbar__wrap .menu {
+        display: flex;
+      }
+      
+      .navbar__wrap .menu > li {
+        display: flex;
+        align-items: stretch;
+      }
+      
+      .navbar__wrap .menu > li > a {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      
+      .navbar__wrap .menu > li > a:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+
+      .menu1 > li > a {
+        text-decoration: none;
+      }
+      
+      .navbar__wrap .menu1 {
+        display: flex;
+      }
+      
+      .navbar__wrap .menu1 > li {
+        display: flex;
+        align-items: stretch;
+      }
+      
+      .navbar__wrap .menu1 > li > a {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      
+      .navbar__wrap .menu1 > li > a:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+      
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section {
+        padding: 120px 0 0 0;
+         /* Отступы сверху и снизу для секции */
+        text-align: center; /* Центрирование содержимого секции */
+    }
+    .profile-container{
+        padding-top: 50px ;
+    }
+    .profile-container .name{
+        font-weight: 400;
+    }
+    
+    
+    /* Основные стили для заголовка */
+    .JOB {
+        font-weight: 700;
+        font-size: 36px;
+        color: #0068FF;
+        text-align: center; /* Центрирует текст по горизонтали внутри контейнера */
+        width: 100%; /* Заставляет заголовок занимать всю ширину контейнера */
+        box-sizing: border-box; /* Включает отступы и границы в общую ширину элемента */
+    }
+    /* Стили для круглого изображения */
+    .rounded-image {
+        width: 300px; /* Задайте нужный размер */
+        height: 300px; /* Задайте нужный размер */
+        border-radius: 50%;
+        object-fit: cover; /* Обеспечивает правильное масштабирование изображения */
+    }
+    .info {
+        text-align: center; /* Центрирует элементы по горизонтали */
+    }
+    
+    .info-item {
+        display: inline-block; /* Позволяет элементам располагаться в строку */
+        margin-right: 101px; /* Увеличивает расстояние между элементами */
+    }
+    
+    .info-item:last-child {
+        margin-right: 0; /* Убирает отступ у последнего элемента */
+    }
+
+    .about {
+        padding: 20px 0; /* Уменьшенные отступы для мобильных устройств */
+        background-color: #212121; /* Цвет фона секции */
+    }
+    
+    .about-text {
+        max-width: 100%; /* Убираем ограничение на ширину для мобильных устройств */
+    }
+    
+    .aboutme {
+        font-weight: 700;
+        font-size: 36px; 
+        color: #0068FF;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 300px;
+    }
+    
+    .aboutme1 {
+        font-weight: 300;
+        font-size: 14px;
+        color: #ffffff;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+    
+    .profile-container1 {
+        padding-left: 15px; /* Уменьшенные отступы по бокам для мобильных устройств */
+        padding-right: 15px;
+    }
+    
+    .bold-text {
+        font-weight: 500;
+    }
+    .bold-text1 {
+        font-weight: 600;
+    }
+    
+    
+
+    .skills-experience-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 40px;
+        box-sizing: border-box;
+        padding: 40px 300px;
+    }
+    
+    .skills-column, .experience-column {
+        width: 48%;
+    }
+    
+    .skills-title, .experience-title {
+        font-size: 36px;
+        color: #0068FF;
+        margin-bottom: 20px;
+    }
+    
+    .skills-list, .experience-list {
+        list-style-type: decimal;
+        padding-left: 20px; /* Отступ для выравнивания текста */
+        margin-top: 0;
+    }
+    
+    .skills-list li, .experience-list li {
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+    
+    .experience-list ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    
+   
+
+
+    
+    .ac1{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #cecece;
+    }
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        max-width: 1300px;
+        min-width: 320px;
+        margin: 50px auto;
+        padding: 0 50px;
+        margin-bottom: 90px;
+        padding-left: 300px;
+        padding-right: 300px;
+        background-color: #cecece;
+      }
+      .accordion h1 {
+        font-size: 36px;
+        color: #0068FF;
+
+      }
+      .accordion-item {
+        
+        margin-top: 16px;
+        border: 1px solid #313131;
+        border-radius: 16px;
+        background: #cecece;
+
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+      }
+      .accordion-item .accordion-item-title {
+        position: relative;
+        margin: 0;
+        display: flex;
+        width: 100%;
+        font-size: 20px;
+        cursor: pointer;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding: 14px 20px;
+        box-sizing: border-box;
+        align-items: center;
+      }
+      .accordion-item .accordion-item-desc {
+        max-height: 0;
+        overflow: hidden;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 300;
+        color: #444;
+        padding: 0 20px;
+        box-sizing: border-box;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+      }
+      .accordion-item input[type="checkbox"] {
+        position: absolute;
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+      .accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
+        content: "\f078"; /* FontAwesome иконка для стрелки вниз */
+        font-weight: 900;
+        font-size: 20px;
+      }
+      .icon{
+        width: 25px;
+      }
+      .accordion-item input[type="checkbox"]:checked ~ .accordion-item-title .icon:after {
+        content: "i"; /* FontAwesome иконка для стрелки вверх */
+        font-weight: 900;
+        font-size: 20px;
+      }
+      .accordion-item:first-child {
+        margin-top: 0;
+      }
+      
+      .accordion-item .icon {
+        margin-left: 14px;
+      }
+      @media screen and (max-width: 767px) {
+        .accordion {
+            padding: 0 16px;
+        }
+        .accordion h1 {
+            font-size: 28px;
+        }
+      }
+
+      .arrow {
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+        width: 20px;
+    }
+    
+    /* Стрелка по умолчанию направлена вниз */
+    .accordion-item input[type="checkbox"] {
+        display: none; /* Скрываем чекбокс */
+    }
+    
+    /* Если чекбокс активен, поворачиваем стрелку вверх */
+    .accordion-item input[type="checkbox"]:checked + label .arrow {
+        transform: rotate(180deg);
+    }
+    .photo-diz{
+        width: 300px;
+        margin-right: 10px;
+    }
+
+
+
+    .contacts-section {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: #212121;
+        padding-left: 190px;
+        padding-right: 190px;
+        padding-top: 20px;
+    }
+    
+    .contacts-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .contacts-title {
+        color: #0068FF;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+
+    .contact-button {
+        display: flex;
+        align-items: center;
+        background-color: #2c2c2c;
+        color: white;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        border-radius: 14px;
+        text-decoration: none;
+        font-size: 18px;
+        width: 280px;
+        transition: background-color 0.3s ease;
+        border: 2px solid #bdbdbd; 
+    }
+    
+    .contact-button:hover {
+        background-color: #0068FF;
+    }
+    
+    
+    .contact-button img {
+        width: 24px;
+        height: 24px;
+        margin-right: 150px;
+    }
+    
+
+    
+    .contact-form {
+        background-color: #d4d4d4;
+        padding: 25px;
+        border-radius: 10px;
+        width: 300px;
+        margin-top: 40px;
+    }
+    
+    .form-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: black;
+    }
+    .email-input{
+        height: 30px;
+    }
+    .email-input,
+    .message-input {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    
+    .message-input {
+        height: 100px;
+        resize: none;
+    }
+    
+    .send-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #212121;
+        color: white;
+        border: none;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .send-button:hover {
+        background-color: rgb(15, 15, 15);
+    }
+    
+    /* Медиазапрос для мобильных устройств */
+    @media (max-width: 768px) {
+        .contacts-section {
+            flex-direction: column;
+            align-items: center; /* Центрирование всех элементов внутри секции */
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    
+        .contacts-list {
+            align-items: center; /* Центрирование кнопок */
+            width: 100%;
+        }
+    
+        .contact-button {
+            margin-left: auto;
+            margin-right: auto; /* Центрирование кнопок */
+        }
+    
+        .contact-form {
+            width: 100%;
+            max-width: 300px;
+            padding: 15px;
+            margin-left: auto;
+            margin-right: auto; /* Центрирование формы */
+        }
+    }
+
+
+    .section-hidden {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    /* Когда секция видима */
+    .section-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .gray{
+        background-color: #212121;
+    }

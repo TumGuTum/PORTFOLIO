@@ -1,0 +1,182 @@
+@media (max-width: 1000px) {
+    .navbar__wrap .menu {
+      display: none;
+    }
+    .navbar {
+
+        background: #ffffff;
+      }
+  
+    .hamb {
+      display: flex;
+      align-items: center;
+    }
+  
+    .hamb__field {
+      padding: 10px 40px;
+      cursor: pointer;
+    }
+  
+    .bar {
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin: 6px auto;
+      background-color: #000000;
+      transition: 0.2s;
+    }
+    .navbar__wrap .menu1 > li > a {
+
+        color: rgba(0, 0, 0, 0.7);
+      }
+      
+      .navbar__wrap .menu1 > li > a:hover {
+        color: rgb(20, 20, 20);
+      }
+    .popup {
+      position: fixed;
+      top: 75px;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 100;
+      display: flex;
+      transition: 0.3s;
+    }
+  
+    .popup.open {
+      left: 0;
+    }
+  
+    .popup .menu {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding: 50px 0;
+      overflow: auto;
+    }
+  
+    .popup .menu > li {
+      width: 100%;
+    }
+  
+    .popup .menu > li > a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: #3f3f3f;
+    }
+  
+    .popup .menu > li > a:hover {
+      background-color: rgba(122, 82, 179, 0.1);
+    }
+  
+    .hamb__field.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamb__field.active .bar:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+  
+    .hamb__field.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    body.noscroll {
+      overflow: hidden;
+    }
+    .profile-container .JOB{
+        font-weight: 700;
+        font-size: 18px;
+        color:  #0068FF;
+        white-space: nowrap;
+    }
+
+  }
+  @media (max-width: 600px) {
+    .info {
+        text-align: center; /* Центрирует элементы по горизонтали */
+    }
+
+    .info-item {
+        display: block; /* Изменяет элементы на блочные для вертикального размещения */
+        margin-right: 0; /* Убирает горизонтальные отступы */
+        margin-bottom: 20px; /* Добавляет вертикальные отступы между элементами */
+    }
+
+    .info-item:last-child {
+        margin-bottom: 0; /* Убирает отступ у последнего элемента */
+    }
+}
+/* Медиазапрос для устройств с максимальной шириной 600px */
+@media (max-width: 1000px) {
+    .about {
+        padding: 10px 0; /* Еще больше уменьшенные отступы для очень маленьких экранов */
+        
+    }
+
+    .aboutme {
+        font-size: 20px; /* Еще меньше размер шрифта заголовка для очень маленьких экранов */
+        padding-left: 30px;
+    }
+
+    .aboutme1 {
+        font-size: 12px; /* Уменьшаем размер текста для контента на маленьких экранах */
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .profile-container1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .header-item-lang-en .translate {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: inherit;
+        font-family: inherit;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer; /* Это оставит кнопку кликабельной */
+    }
+    .header-item-lang-ru .translate {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: inherit;
+        font-family: inherit;
+        color:  #000;
+        text-decoration: none;
+        cursor: pointer; /* Это оставит кнопку кликабельной */
+    }
+}
+@media (max-width: 768px) {
+    .skills-experience-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .skills-column, .experience-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skills-title, .experience-title {
+        text-align: left;
+    }
+
+    .skills-list, .experience-list {
+        padding-left: 40px; /* Корректируем отступы для мобильных устройств */
+    }
+}
